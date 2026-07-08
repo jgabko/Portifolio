@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title.resume">resume // your name</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="site-header">
+    <span class="brand enter enter-1">seu-nome<span class="dot">.</span>dev</span>
+    <nav class="nav-item-list enter enter-2" aria-label="main navigation">
+      <a href="index.html" class="nav-item" data-i18n="nav.home">-> home</a>
+      <a href="projetos.html" class="nav-item" data-i18n="nav.projects">-> projects</a>
+      <a href="curriculo.html" class="nav-item" aria-current="page" data-i18n="nav.resume">-> resume</a>
+      <a href="sobre.html" class="nav-item" data-i18n="nav.about">-> about</a>
+      <a href="contato.html" class="nav-item" data-i18n="nav.contact">-> contact</a>
+      <a href="styleguide.html" class="nav-item" data-i18n="nav.styleguide">-> styleguide</a>
+      <span class="spacer"></span>
+      <button type="button" class="lang-toggle" aria-label="change language / mudar idioma">
+        <span class="lang-opt" data-lang-set="en">en</span><span class="lang-sep">/</span><span class="lang-opt" data-lang-set="pt">pt</span>
+      </button>
+      <a href="https://github.com/seu-usuario" class="nav-ext" target="_blank" rel="noopener">github /></a>
+      <a href="https://linkedin.com/in/seu-usuario" class="nav-ext" target="_blank" rel="noopener">linkedin /></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="enter enter-3">
+      <h2><span class="idx" data-i18n="resume.heading">01 / resume</span></h2>
+      <a class="download-cta" href="curriculo.pdf" download data-i18n="resume.download" data-i18n-html>&#8681; download resume.pdf</a>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="resume.expHeading">02 / experience[2]</span></h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title" data-i18n="resume.job1Title">software developer</span>
+          <span class="entry-date" data-i18n="resume.job1Date">2024 — present</span>
+        </div>
+        <span class="entry-org" data-i18n="resume.job1Org">company name</span>
+        <p class="entry-desc" data-i18n="resume.job1Desc">
+          brief description of responsibilities and results achieved in this role. keep it to one or two objective sentences.
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title" data-i18n="resume.job2Title">development intern</span>
+          <span class="entry-date" data-i18n="resume.job2Date">2022 — 2024</span>
+        </div>
+        <span class="entry-org" data-i18n="resume.job2Org">previous company name</span>
+        <p class="entry-desc" data-i18n="resume.job2Desc">
+          brief description of responsibilities and results achieved in this role.
+        </p>
+      </div>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="resume.eduHeading">03 / education[1]</span></h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title" data-i18n="resume.eduTitle">bachelor's in computer science</span>
+          <span class="entry-date" data-i18n="resume.eduDate">2020 — 2024</span>
+        </div>
+        <span class="entry-org" data-i18n="resume.eduOrg">institution name</span>
+      </div>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="resume.skillsHeading">04 / skills</span></h2>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3 data-i18n="resume.skillsLang">languages</h3>
+          <div class="tags">
+            <span>&lt;python&gt;</span>
+            <span>&lt;typescript&gt;</span>
+            <span>&lt;c#&gt;</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="resume.skillsTools">tools</h3>
+          <div class="tags">
+            <span>[docker]</span>
+            <span>[git]</span>
+            <span>[postgresql]</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="resume.skillsFrameworks">frameworks</h3>
+          <div class="tags">
+            <span>(react)</span>
+            <span>(.net)</span>
+            <span>(fastapi)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 seu nome</span>
+    <span data-i18n="footer.backHome">-> home</span>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

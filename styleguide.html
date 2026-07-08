@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title.styleguide">styleguide // your name</title>
+<meta name="description" data-i18n="meta.desc.styleguide" data-i18n-attr="content" content="design system for the portfolio: color tokens, typography and components.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="site-header">
+    <span class="brand enter enter-1">seu-nome<span class="dot">.</span>dev</span>
+    <nav class="nav-item-list enter enter-2" aria-label="main navigation">
+      <a href="index.html" class="nav-item" data-i18n="nav.home">-> home</a>
+      <a href="projetos.html" class="nav-item" data-i18n="nav.projects">-> projects</a>
+      <a href="curriculo.html" class="nav-item" data-i18n="nav.resume">-> resume</a>
+      <a href="sobre.html" class="nav-item" data-i18n="nav.about">-> about</a>
+      <a href="contato.html" class="nav-item" data-i18n="nav.contact">-> contact</a>
+      <a href="styleguide.html" class="nav-item" aria-current="page" data-i18n="nav.styleguide">-> styleguide</a>
+      <span class="spacer"></span>
+      <button type="button" class="lang-toggle" aria-label="change language / mudar idioma">
+        <span class="lang-opt" data-lang-set="en">en</span><span class="lang-sep">/</span><span class="lang-opt" data-lang-set="pt">pt</span>
+      </button>
+      <a href="https://github.com/seu-usuario" class="nav-ext" target="_blank" rel="noopener">github /></a>
+      <a href="https://linkedin.com/in/seu-usuario" class="nav-ext" target="_blank" rel="noopener">linkedin /></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero enter enter-3">
+      <span class="eyebrow">spec-01 // design system</span>
+      <h1>styleguide.</h1>
+      <p class="lede" data-i18n="styleguide.lede">
+        a live reference of the tokens and components used in this portfolio — everything you see here is real css, not an image. copy the values straight from the source if you need to reuse them.
+      </p>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="styleguide.colorsHeading">01 / color palette (tokens)</span></h2>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background:var(--bg-void)"></div>
+          <div class="swatch-meta"><strong>--bg-void</strong>#0d0d0d<br><span data-i18n="styleguide.swatch1Desc">global background</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:var(--bg-surface)"></div>
+          <div class="swatch-meta"><strong>--bg-surface</strong>#1a1a1a<br><span data-i18n="styleguide.swatch2Desc">blocks &amp; highlights</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:var(--text-primary)"></div>
+          <div class="swatch-meta"><strong>--text-primary</strong>#e5e5e5<br><span data-i18n="styleguide.swatch3Desc">active text</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:var(--text-muted)"></div>
+          <div class="swatch-meta"><strong>--text-muted</strong>#808080<br><span data-i18n="styleguide.swatch4Desc">metadata</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:var(--accent-hover)"></div>
+          <div class="swatch-meta"><strong>--accent-hover</strong>#cccccc<br><span data-i18n="styleguide.swatch5Desc">hover states</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="styleguide.typeHeading">02 / typography</span></h2>
+
+      <div class="specimen-row">
+        <span class="specimen-label">h1 / space grotesk 700</span>
+        <span class="specimen-sample" style="font-size:1.8rem;font-weight:700" data-i18n="home.heroTitle" data-i18n-html>hi, i'm your name.</span>
+      </div>
+      <div class="specimen-row">
+        <span class="specimen-label">h2 / space mono 400</span>
+        <span class="specimen-sample" style="font-family:var(--font-mono);font-size:0.85rem;color:var(--text-muted)" data-i18n="styleguide.specimenH2Sample">01 / content section</span>
+      </div>
+      <div class="specimen-row">
+        <span class="specimen-label">body / space grotesk 400</span>
+        <span class="specimen-sample" data-i18n="styleguide.specimenBodySample">running text in lowercase, 1rem, 1.6 line height.</span>
+      </div>
+      <div class="specimen-row">
+        <span class="specimen-label">mono / space mono 400</span>
+        <span class="specimen-sample" style="font-family:var(--font-mono);font-size:0.85rem">&lt;python&gt; [.net] {postgresql}</span>
+      </div>
+
+      <div class="code-block"><span class="c" data-i18n="styleguide.codeTypeComment">/* global typography tokens */</span><br>
+:root {<br>
+&nbsp;&nbsp;--font-sans: 'Space Grotesk', sans-serif;<br>
+&nbsp;&nbsp;--font-mono: 'Space Mono', monospace;<br>
+}<br>
+body { text-transform: lowercase; }</div>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="styleguide.navHeading">03 / structural navigation</span></h2>
+      <div class="component-demo">
+        <div class="demo-caption" data-i18n="styleguide.navCaption">arrows indicate logical directory flow; underline animates on hover</div>
+        <nav class="nav-item-list" style="font-family:var(--font-mono);font-size:0.9rem;gap:20px">
+          <a href="#" class="nav-item" onclick="return false" data-i18n="styleguide.navDemo1">-> /about</a>
+          <a href="#" class="nav-item" onclick="return false" data-i18n="styleguide.navDemo2">-> /projects</a>
+          <a href="#" class="nav-ext" onclick="return false">github /></a>
+        </nav>
+      </div>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="styleguide.tagsHeading">04 / data delimiters (tags)</span></h2>
+      <div class="component-demo">
+        <div class="demo-caption" data-i18n="styleguide.tagsCaption">native syntax characters replace graphical badges</div>
+        <div class="tags" style="font-size:1rem;color:var(--text-primary)">
+          <span>&lt;c#&gt;</span>
+          <span>[.net]</span>
+          <span>{python}</span>
+          <span>(postgresql)</span>
+        </div>
+      </div>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="styleguide.listHeading">05 / list item (content array)</span></h2>
+      <div class="component-demo" style="padding:0">
+        <div class="project-array">
+          <a class="project-item" href="#" onclick="return false">
+            <div class="project-head">
+              <span class="project-name">pc-hunter-tool</span>
+              <span class="project-links">github/></span>
+            </div>
+            <p class="project-desc" data-i18n="styleguide.listDemoDesc">linear display with no box outlines or shadows.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="styleguide.formHeading">06 / buttons and form fields</span></h2>
+      <div class="component-demo">
+        <div class="demo-caption" data-i18n="styleguide.formCaption">default, focus and hover states follow the same controlled contrast</div>
+        <div class="field" style="max-width:320px;margin-bottom:16px">
+          <label for="demo-input" data-i18n="styleguide.fieldLabel">sample field</label>
+          <input type="text" id="demo-input" data-i18n="styleguide.fieldPlaceholder" data-i18n-attr="placeholder" placeholder="type something">
+        </div>
+        <button type="button" class="submit-btn" onclick="return false" data-i18n="contact.submit">send -></button>
+      </div>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="styleguide.motionHeading">07 / motion</span></h2>
+      <p class="muted" style="max-width:60ch" data-i18n="styleguide.motionDesc" data-i18n-html>
+        page entrances use fade + a slight vertical shift (0.5s). sections below the fold reveal as they enter the viewport via intersectionobserver. everything respects <code>prefers-reduced-motion</code>.
+      </p>
+      <div class="code-block"><span class="c" data-i18n="styleguide.codeMotionComment">/* entrance animation */</span><br>
+@keyframes fade-up {<br>
+&nbsp;&nbsp;from { opacity: 0; transform: translateY(10px); }<br>
+&nbsp;&nbsp;to &nbsp;&nbsp;{ opacity: 1; transform: translateY(0); }<br>
+}</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 seu nome</span>
+    <span data-i18n="footer.backHome">-> home</span>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

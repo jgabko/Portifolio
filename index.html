@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title.home">your name // portfolio</title>
+<meta name="description" data-i18n="meta.desc.home" data-i18n-attr="content" content="portfolio of your name — software developer.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="site-header">
+    <span class="brand enter enter-1">seu-nome<span class="dot">.</span>dev</span>
+    <nav class="nav-item-list enter enter-2" aria-label="main navigation">
+      <a href="index.html" class="nav-item" aria-current="page" data-i18n="nav.home">-> home</a>
+      <a href="projetos.html" class="nav-item" data-i18n="nav.projects">-> projects</a>
+      <a href="curriculo.html" class="nav-item" data-i18n="nav.resume">-> resume</a>
+      <a href="sobre.html" class="nav-item" data-i18n="nav.about">-> about</a>
+      <a href="contato.html" class="nav-item" data-i18n="nav.contact">-> contact</a>
+      <a href="styleguide.html" class="nav-item" data-i18n="nav.styleguide">-> styleguide</a>
+      <span class="spacer"></span>
+      <button type="button" class="lang-toggle" aria-label="change language / mudar idioma">
+        <span class="lang-opt" data-lang-set="en">en</span><span class="lang-sep">/</span><span class="lang-opt" data-lang-set="pt">pt</span>
+      </button>
+      <a href="https://github.com/seu-usuario" class="nav-ext" target="_blank" rel="noopener">github /></a>
+      <a href="https://linkedin.com/in/seu-usuario" class="nav-ext" target="_blank" rel="noopener">linkedin /></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="eyebrow enter enter-2" data-i18n="home.eyebrow">~/your-name</span>
+      <h1 class="enter enter-3" data-i18n="home.heroTitle" data-i18n-html>hi, i'm your name.<br>software developer.</h1>
+      <p class="lede enter enter-4" data-i18n="home.lede">
+        i build tools and applications focused on automation, data, and lean interfaces. this space gathers my projects, experience, and ways to reach me.
+      </p>
+      <div class="home-links enter enter-5">
+        <a href="projetos.html" data-i18n="home.linkProjects">view projects -></a>
+        <a href="curriculo.html" data-i18n="home.linkResume">view resume -></a>
+        <a href="contato.html" data-i18n="home.linkContact">get in touch -></a>
+      </div>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="home.stackHeading">02 / stack</span></h2>
+      <div class="tags">
+        <span>&lt;python&gt;</span>
+        <span>[typescript]</span>
+        <span>{postgresql}</span>
+        <span>(docker)</span>
+        <span>&lt;react&gt;</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 seu nome</span>
+    <span data-i18n="footer.tagline">built with syntax, not svgs.</span>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

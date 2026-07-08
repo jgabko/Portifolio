@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title.about">about // your name</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="site-header">
+    <span class="brand enter enter-1">seu-nome<span class="dot">.</span>dev</span>
+    <nav class="nav-item-list enter enter-2" aria-label="main navigation">
+      <a href="index.html" class="nav-item" data-i18n="nav.home">-> home</a>
+      <a href="projetos.html" class="nav-item" data-i18n="nav.projects">-> projects</a>
+      <a href="curriculo.html" class="nav-item" data-i18n="nav.resume">-> resume</a>
+      <a href="sobre.html" class="nav-item" aria-current="page" data-i18n="nav.about">-> about</a>
+      <a href="contato.html" class="nav-item" data-i18n="nav.contact">-> contact</a>
+      <a href="styleguide.html" class="nav-item" data-i18n="nav.styleguide">-> styleguide</a>
+      <span class="spacer"></span>
+      <button type="button" class="lang-toggle" aria-label="change language / mudar idioma">
+        <span class="lang-opt" data-lang-set="en">en</span><span class="lang-sep">/</span><span class="lang-opt" data-lang-set="pt">pt</span>
+      </button>
+      <a href="https://github.com/seu-usuario" class="nav-ext" target="_blank" rel="noopener">github /></a>
+      <a href="https://linkedin.com/in/seu-usuario" class="nav-ext" target="_blank" rel="noopener">linkedin /></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="enter enter-3">
+      <h2><span class="idx" data-i18n="about.heading">01 / about me</span></h2>
+      <h1 data-i18n="about.title">who writes this code.</h1>
+      <p data-i18n="about.p1">
+        replace this paragraph with your own introduction: who you are, where you studied or worked, and what brought you to programming. keep a direct tone — one or two sentences are enough for the first paragraph.
+      </p>
+      <p class="muted" data-i18n="about.p2">
+        a second paragraph can talk about your interests outside work, the values that guide how you build software, or the kind of problem you most enjoy solving.
+      </p>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="about.interestsHeading">02 / interests</span></h2>
+      <div class="tags">
+        <span data-i18n="about.tag1">#automation</span>
+        <span data-i18n="about.tag2">#data</span>
+        <span data-i18n="about.tag3">#open-source</span>
+        <span data-i18n="about.tag4">#tui-design</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 seu nome</span>
+    <span data-i18n="footer.backHome">-> home</span>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

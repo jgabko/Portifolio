@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title.projects">projects // your name</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="site-header">
+    <span class="brand enter enter-1">seu-nome<span class="dot">.</span>dev</span>
+    <nav class="nav-item-list enter enter-2" aria-label="main navigation">
+      <a href="index.html" class="nav-item" data-i18n="nav.home">-> home</a>
+      <a href="projetos.html" class="nav-item" aria-current="page" data-i18n="nav.projects">-> projects</a>
+      <a href="curriculo.html" class="nav-item" data-i18n="nav.resume">-> resume</a>
+      <a href="sobre.html" class="nav-item" data-i18n="nav.about">-> about</a>
+      <a href="contato.html" class="nav-item" data-i18n="nav.contact">-> contact</a>
+      <a href="styleguide.html" class="nav-item" data-i18n="nav.styleguide">-> styleguide</a>
+      <span class="spacer"></span>
+      <button type="button" class="lang-toggle" aria-label="change language / mudar idioma">
+        <span class="lang-opt" data-lang-set="en">en</span><span class="lang-sep">/</span><span class="lang-opt" data-lang-set="pt">pt</span>
+      </button>
+      <a href="https://github.com/seu-usuario" class="nav-ext" target="_blank" rel="noopener">github /></a>
+      <a href="https://linkedin.com/in/seu-usuario" class="nav-ext" target="_blank" rel="noopener">linkedin /></a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 class="enter enter-3"><span class="idx" data-i18n="projects.heading">01 / projects[3]</span></h2>
+      <p class="muted enter enter-4" style="max-width:60ch" data-i18n="projects.intro">
+        click any item in the list to open the repository on github.
+      </p>
+
+      <div class="project-array">
+
+        <a class="project-item" data-animate href="https://github.com/seu-usuario/pc-hunter-tool" target="_blank" rel="noopener">
+          <div class="project-head">
+            <span class="project-name">pc-hunter-tool</span>
+            <span class="project-links">github/></span>
+          </div>
+          <p class="project-desc" data-i18n="projects.desc1">
+            structured automation for web scraping and real-time market monitoring.
+          </p>
+          <div class="tags project-tags">
+            <span>&lt;python&gt;</span>
+            <span>{selenium}</span>
+            <span>(postgresql)</span>
+          </div>
+        </a>
+
+        <a class="project-item" data-animate href="https://github.com/seu-usuario/antibiotics-manual" target="_blank" rel="noopener">
+          <div class="project-head">
+            <span class="project-name">antibiotics-manual</span>
+            <span class="project-links">github/></span>
+          </div>
+          <p class="project-desc" data-i18n="projects.desc2">
+            digital and algorithmic platform for cataloging and querying medical data.
+          </p>
+          <div class="tags project-tags">
+            <span>&lt;c#&gt;</span>
+            <span>[.net]</span>
+            <span>(sql server)</span>
+          </div>
+        </a>
+
+        <a class="project-item" data-animate href="https://github.com/seu-usuario/novo-projeto" target="_blank" rel="noopener">
+          <div class="project-head">
+            <span class="project-name">novo-projeto</span>
+            <span class="project-links">github/></span>
+          </div>
+          <p class="project-desc" data-i18n="projects.desc3">
+            brief project description — replace this text with a real summary of what it does and what problem it solves.
+          </p>
+          <div class="tags project-tags">
+            <span>&lt;typescript&gt;</span>
+            <span>[react]</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 seu nome</span>
+    <span data-i18n="footer.backHome">-> home</span>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
