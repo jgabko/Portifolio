@@ -12,21 +12,30 @@
 <div class="wrap">
 
   <header class="site-header">
-    <span class="brand enter enter-1">seu-nome<span class="dot">.</span>dev</span>
-    <nav class="nav-item-list enter enter-2" aria-label="main navigation">
-      <a href="index.html" class="nav-item" aria-current="page" data-i18n="nav.home">-> home</a>
-      <a href="projetos.html" class="nav-item" data-i18n="nav.projects">-> projects</a>
-      <a href="curriculo.html" class="nav-item" data-i18n="nav.resume">-> resume</a>
-      <a href="sobre.html" class="nav-item" data-i18n="nav.about">-> about</a>
-      <a href="contato.html" class="nav-item" data-i18n="nav.contact">-> contact</a>
-      <a href="styleguide.html" class="nav-item" data-i18n="nav.styleguide">-> styleguide</a>
-      <span class="spacer"></span>
+    
+    <div class="header-top enter enter-1">
+      <span class="brand">jgab_ko<span class="dot">.</span>dev</span>
+      
       <button type="button" class="lang-toggle" aria-label="change language / mudar idioma">
         <span class="lang-opt" data-lang-set="en">en</span><span class="lang-sep">/</span><span class="lang-opt" data-lang-set="pt">pt</span>
       </button>
-      <a href="https://github.com/seu-usuario" class="nav-ext" target="_blank" rel="noopener">github /></a>
-      <a href="https://linkedin.com/in/seu-usuario" class="nav-ext" target="_blank" rel="noopener">linkedin /></a>
-    </nav>
+    </div>
+    
+    <div class="header-bottom enter enter-2">
+      <nav class="nav-item-list" aria-label="main navigation">
+        <a href="index.html" class="nav-item" aria-current="page" data-i18n="nav.home">-> home</a>
+        <a href="projetos.html" class="nav-item" data-i18n="nav.projects">-> projects</a>
+        <a href="curriculo.html" class="nav-item" data-i18n="nav.resume">-> resume</a>
+        <a href="sobre.html" class="nav-item" data-i18n="nav.about">-> about</a>
+        <a href="contato.html" class="nav-item" data-i18n="nav.contact">-> contact</a>
+      </nav>
+
+      <div class="header-socials">
+        <a href="https://www.linkedin.com/in/jgabrielkochla/" class="nav-ext" target="_blank" rel="noopener">linkedin /></a>
+        <a href="https://github.com/jgabko" class="nav-ext" target="_blank" rel="noopener">github /></a>
+      </div>
+    </div>
+
   </header>
 
   <main>
@@ -42,7 +51,7 @@
         <a href="contato.html" data-i18n="home.linkContact">get in touch -></a>
       </div>
     </section>
-
+    <!--
     <section data-animate>
       <h2><span class="idx" data-i18n="home.stackHeading">02 / stack</span></h2>
       <div class="tags">
@@ -52,12 +61,12 @@
         <span>(docker)</span>
         <span>&lt;react&gt;</span>
       </div>
-    </section>
+    </section>-->
   </main>
 
   <footer class="site-footer">
-    <span>&copy; 2026 seu nome</span>
-    <span data-i18n="footer.tagline">built with syntax, not svgs.</span>
+    <span>&copy; 2026 jgab_ko</span>
+    <a href="index.html" data-i18n="footer.backHome">-> home</a>
   </footer>
 
 </div>
