@@ -9,7 +9,9 @@
   --bg-surface: #1a1a1a;
   --text-primary: #e5e5e5;
   --text-muted: #808080;
-  --accent-hover: #cccccc;
+  --accent-hover: #39ff7a;
+  --accent-green: #39ff7a;
+  --accent-green-soft: rgba(57, 255, 122, 0.12);
 
   --font-sans: 'Space Grotesk', 'Segoe UI', sans-serif;
   --font-mono: 'Space Mono', 'Courier New', monospace;
@@ -103,12 +105,12 @@ header.site-header {
 }
 
 .brand .dot {
-  color: var(--text-muted);
+  color: var(--accent-green);
 }
 
 .brand::after {
   content: '_';
-  color: var(--text-muted);
+  color: var(--accent-green);
   animation: blink 1.1s steps(1) infinite;
 }
 
@@ -154,7 +156,7 @@ nav.nav-item-list .spacer {
 }
 
 .nav-item[aria-current="page"] {
-  color: var(--text-primary);
+  color: var(--accent-green);
 }
 
 .nav-item:hover {
@@ -249,7 +251,7 @@ h2 {
 }
 
 h2 .idx {
-  color: var(--text-muted);
+  color: var(--accent-green);
 }
 
 p {
@@ -299,6 +301,7 @@ section {
 
 .project-item:hover {
   background-color: var(--bg-surface);
+  border-left: 2px solid var(--accent-green);
 }
 
 .project-item:hover .project-links {
@@ -536,7 +539,7 @@ form.contact-form {
 .field input:focus,
 .field textarea:focus {
   outline: none;
-  border-color: var(--text-muted);
+  border-color: var(--accent-green);
 }
 
 .field textarea {
@@ -561,9 +564,9 @@ form.contact-form {
 }
 
 .submit-btn:hover {
-  background-color: var(--text-primary);
+  background-color: var(--accent-green);
   color: var(--bg-void);
-  border-color: var(--text-primary);
+  border-color: var(--accent-green);
 }
 
 /* ---------- styleguide ---------- */

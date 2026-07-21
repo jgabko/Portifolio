@@ -1,0 +1,39 @@
+<svg viewBox="0 0 700 438" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t2">
+  <title id="t2">antibiotics-manual — mobile clinical reference app</title>
+  <defs>
+    <pattern id="stripes2" width="11" height="11" patternTransform="rotate(135)" patternUnits="userSpaceOnUse">
+      <rect width="11" height="11" fill="#0d0d0d"/>
+      <line x1="0" y1="0" x2="0" y2="11" stroke="#1f1f1f" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <rect width="700" height="438" fill="url(#stripes2)"/>
+  <rect width="700" height="438" fill="#0d0d0d" fill-opacity="0.35"/>
+
+  <!-- phone frame -->
+  <rect x="268" y="60" width="164" height="318" rx="20" fill="#161616" stroke="#3a3a3a" stroke-width="3"/>
+  <rect x="284" y="86" width="132" height="240" rx="4" fill="#101010"/>
+  <rect x="322" y="70" width="56" height="6" rx="3" fill="#3a3a3a"/>
+
+  <!-- app top bar -->
+  <rect x="284" y="86" width="132" height="30" fill="#1f9a4c" fill-opacity="0.25"/>
+  <line x1="296" y1="101" x2="360" y2="101" stroke="#39ff7a" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- list rows referencing "protocols" -->
+  <rect x="296" y="132" width="108" height="18" rx="3" fill="#232323"/>
+  <rect x="296" y="160" width="108" height="18" rx="3" fill="#232323"/>
+  <rect x="296" y="188" width="108" height="18" rx="3" fill="#232323"/>
+  <line x1="304" y1="141" x2="352" y2="141" stroke="#808080" stroke-width="2"/>
+  <line x1="304" y1="169" x2="368" y2="169" stroke="#808080" stroke-width="2"/>
+  <line x1="304" y1="197" x2="344" y2="197" stroke="#808080" stroke-width="2"/>
+
+  <!-- home indicator -->
+  <rect x="330" y="360" width="40" height="4" rx="2" fill="#3a3a3a"/>
+
+  <!-- medical cross badge, large accent -->
+  <circle cx="480" cy="200" r="66" fill="#0d0d0d" fill-opacity="0.6" stroke="#39ff7a" stroke-width="3"/>
+  <path d="M480 168 L480 232 M448 200 L512 200" stroke="#39ff7a" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- pulse / vitals line -->
+  <polyline points="150,300 200,300 218,270 236,330 254,300 300,300" fill="none" stroke="#e5e5e5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
