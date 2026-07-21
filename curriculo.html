@@ -16,6 +16,7 @@
       <span class="brand">jgab_ko<span class="dot">.</span>dev</span>
       
       <button type="button" class="lang-toggle" aria-label="change language / mudar idioma">
+        <svg class="icon icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
         <span class="lang-opt" data-lang-set="en">en</span><span class="lang-sep">/</span><span class="lang-opt" data-lang-set="pt">pt</span>
       </button>
     </div>
@@ -30,8 +31,8 @@
       </nav>
 
       <div class="header-socials">
-        <a href="https://www.linkedin.com/in/jgabrielkochla/" class="nav-ext" target="_blank" rel="noopener">linkedin /></a>
-        <a href="https://github.com/jgabko" class="nav-ext" target="_blank" rel="noopener">github /></a>
+        <a href="https://www.linkedin.com/in/jgabrielkochla/" class="nav-ext hover-lift" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>linkedin /></a>
+        <a href="https://github.com/jgabko" class="nav-ext hover-lift" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>github /></a>
       </div>
     </div>
 
@@ -40,13 +41,13 @@
   <main>
     <section class="enter enter-3">
       <h2><span class="idx" data-i18n="resume.heading">01 / resume</span></h2>
-      <a class="download-cta" href="Curriculo.pdf" download data-i18n="resume.download" data-i18n-html>&#8681; download resume.pdf</a>
+      <a class="download-cta hover-lift" href="Curriculo.pdf" download><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M3 15v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> <span data-i18n="resume.download">download resume.pdf</span></a>
     </section>
 
-    <section data-animate>
+    <section data-animate data-animate-group>
       <h2><span class="idx" data-i18n="resume.expHeading">02 / experience[2]</span></h2>
 
-      <div class="entry">
+      <div class="entry" data-animate>
         <div class="entry-head">
           <span class="entry-title" data-i18n="resume.job1Title">it intern (data & software support)</span>
           <span class="entry-date" data-i18n="resume.job1Date">jul 2025 — abr 2026</span>
@@ -57,7 +58,7 @@
         </p>
       </div>
 
-      <div class="entry">
+      <div class="entry" data-animate>
         <div class="entry-head">
           <span class="entry-title" data-i18n="resume.job2Title">full stack dev</span>
           <span class="entry-date" data-i18n="resume.job2Date">jun 2024 — apr 2025</span>
@@ -83,9 +84,9 @@
 
     <section data-animate>
       <h2><span class="idx" data-i18n="resume.skillsHeading">04 / skills</span></h2>
-      <div class="skill-groups">
-        <div class="skill-group">
-          <h3 data-i18n="resume.skillsLang">languages</h3>
+      <div class="skill-groups" data-animate-group>
+        <div class="skill-group" data-animate="slide-left">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg> <span data-i18n="resume.skillsLang">languages</span></h3>
           <div class="tags">
             <span>&lt;java&gt;</span>
             <span>&lt;php&gt;</span>
@@ -96,8 +97,8 @@
             <span>&lt;Dart&gt;</span>
           </div>
         </div>
-        <div class="skill-group">
-          <h3 data-i18n="resume.skillsTools">tools & db</h3>
+        <div class="skill-group" data-animate="slide-left">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg> <span data-i18n="resume.skillsTools">tools & db</span></h3>
           <div class="tags">
             <span>[linux]</span>
             <span>[mysql]</span>
@@ -107,8 +108,8 @@
             <span>[AWS queue]</span>
           </div>
         </div>
-        <div class="skill-group">
-          <h3 data-i18n="resume.skillsFrameworks">frameworks & methods</h3>
+        <div class="skill-group" data-animate="slide-left">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg> <span data-i18n="resume.skillsFrameworks">frameworks & methods</span></h3>
           <div class="tags">
             <span>(spring-boot)</span>
             <span>(flask)</span>

@@ -191,6 +191,28 @@ nav.nav-item-list .spacer {
   transition: border-color 0.15s ease;
 }
 
+/* ---------- ícones (lucide, svg inline) ---------- */
+
+.icon {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  vertical-align: -2px;
+  flex-shrink: 0;
+}
+
+.header-socials .nav-ext .icon {
+  margin-right: 4px;
+  width: 12px;
+  height: 12px;
+}
+
+.icon-globe {
+  width: 12px;
+  height: 12px;
+  color: var(--text-muted);
+}
+
 .lang-toggle:hover {
   border-color: var(--text-muted);
 }
@@ -263,7 +285,9 @@ section {
 }
 
 .project-item {
-  display: block;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
   padding: 20px 0;
   border-top: 1px solid var(--bg-surface);
   color: var(--text-primary);
@@ -279,6 +303,57 @@ section {
 
 .project-item:hover .project-links {
   color: var(--accent-hover);
+}
+
+/* thumbnail: moldura tipo "janela de terminal" — combina com a identidade
+   do site mesmo antes da imagem real ser adicionada (fallback listrado) */
+
+.project-media {
+  flex-shrink: 0;
+  width: 168px;
+  border: 1px solid var(--bg-surface);
+  overflow: hidden;
+}
+
+.project-chrome {
+  display: flex;
+  gap: 5px;
+  padding: 7px 8px;
+  background-color: var(--bg-surface);
+}
+
+.project-chrome .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.project-thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--bg-void);
+  background-image: repeating-linear-gradient(135deg, var(--bg-surface) 0 2px, transparent 2px 9px);
+}
+
+.project-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-item:hover .project-thumb img {
+  transform: scale(1.06);
+}
+
+.project-body {
+  flex: 1;
+  min-width: 0;
 }
 
 .project-head {
@@ -300,6 +375,9 @@ section {
   font-size: 0.8rem;
   color: var(--text-muted);
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .project-desc {
@@ -368,6 +446,9 @@ section {
   color: var(--text-muted);
   font-weight: 400;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .skill-group .tags {
@@ -375,7 +456,9 @@ section {
 }
 
 .download-cta {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--text-primary);
@@ -414,6 +497,9 @@ section {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .contact-value {
@@ -469,6 +555,9 @@ form.contact-form {
   cursor: pointer;
   text-transform: lowercase;
   transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .submit-btn:hover {
@@ -617,6 +706,9 @@ footer.site-footer {
 
 .home-links a {
   color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .home-links a:hover {
@@ -649,16 +741,39 @@ footer.site-footer {
 .enter-4 { animation-delay: 0.26s; }
 .enter-5 { animation-delay: 0.34s; }
 
-/* reveal ao rolar: seções abaixo da dobra */
+/* reveal ao rolar: seções abaixo da dobra
+   variantes via data-animate="fade-in|scale|slide-left|slide-right"
+   (sem valor = fade-up, comportamento padrão/legado) */
 [data-animate] {
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: calc(var(--stagger-index, 0) * 0.07s);
 }
+
+[data-animate="fade-in"]    { transform: none; }
+[data-animate="scale"]      { transform: scale(0.94); }
+[data-animate="slide-left"]  { transform: translateX(-18px); }
+[data-animate="slide-right"] { transform: translateX(18px); }
 
 [data-animate].in-view {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+}
+
+/* utilitárias de hover, reaproveitáveis por qualquer componente (ícones, botões, cards) */
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+}
+
+.hover-scale {
+  transition: transform 0.2s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.08);
 }
 
 /* sublinhado animado nos links de navegação */
@@ -699,14 +814,20 @@ footer.site-footer {
   header.site-header { padding-top: 28px; }
   section { margin-bottom: 40px; }
   .entry-head, .project-head, .contact-item { flex-direction: column; gap: 2px; }
+  .project-item { flex-direction: column; }
+  .project-media { width: 100%; }
 }
 
 /* ---------- reduced motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  a, .submit-btn, .project-item, .entry, .nav-item::after, .nav-ext::after {
+  a, .submit-btn, .project-item, .entry, .nav-item::after, .nav-ext::after,
+  .hover-lift, .hover-scale, .project-thumb img {
     transition: none;
+  }
+  .hover-lift:hover, .hover-scale:hover, .project-item:hover .project-thumb img {
+    transform: none;
   }
   .brand::after {
     animation: none;

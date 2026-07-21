@@ -17,6 +17,7 @@
       <span class="brand">jgab_ko<span class="dot">.</span>dev</span>
       
       <button type="button" class="lang-toggle" aria-label="change language / mudar idioma">
+        <svg class="icon icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
         <span class="lang-opt" data-lang-set="en">en</span><span class="lang-sep">/</span><span class="lang-opt" data-lang-set="pt">pt</span>
       </button>
     </div>
@@ -31,8 +32,8 @@
       </nav>
 
       <div class="header-socials">
-        <a href="https://www.linkedin.com/in/jgabrielkochla/" class="nav-ext" target="_blank" rel="noopener">linkedin /></a>
-        <a href="https://github.com/jgabko" class="nav-ext" target="_blank" rel="noopener">github /></a>
+        <a href="https://www.linkedin.com/in/jgabrielkochla/" class="nav-ext hover-lift" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>linkedin /></a>
+        <a href="https://github.com/jgabko" class="nav-ext hover-lift" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>github /></a>
       </div>
     </div>
 
@@ -107,7 +108,7 @@ body { text-transform: lowercase; }</div>
         <nav class="nav-item-list" style="font-family:var(--font-mono);font-size:0.9rem;gap:20px">
           <a href="#" class="nav-item" onclick="return false" data-i18n="styleguide.navDemo1">-> /about</a>
           <a href="#" class="nav-item" onclick="return false" data-i18n="styleguide.navDemo2">-> /projects</a>
-          <a href="#" class="nav-ext" onclick="return false">github /></a>
+          <a href="#" class="nav-ext hover-lift" onclick="return false"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>github /></a>
         </nav>
       </div>
     </section>
@@ -130,11 +131,17 @@ body { text-transform: lowercase; }</div>
       <div class="component-demo" style="padding:0">
         <div class="project-array">
           <a class="project-item" href="#" onclick="return false">
-            <div class="project-head">
-              <span class="project-name">pc-hunter-tool</span>
-              <span class="project-links">github/></span>
+            <div class="project-media">
+              <div class="project-chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+              <div class="project-thumb"></div>
             </div>
-            <p class="project-desc" data-i18n="styleguide.listDemoDesc">linear display with no box outlines or shadows.</p>
+            <div class="project-body">
+              <div class="project-head">
+                <span class="project-name">pc-hunter-tool</span>
+                <span class="project-links"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>github/></span>
+              </div>
+              <p class="project-desc" data-i18n="styleguide.listDemoDesc">linear display with no box outlines or shadows.</p>
+            </div>
           </a>
         </div>
       </div>
@@ -148,7 +155,7 @@ body { text-transform: lowercase; }</div>
           <label for="demo-input" data-i18n="styleguide.fieldLabel">sample field</label>
           <input type="text" id="demo-input" data-i18n="styleguide.fieldPlaceholder" data-i18n-attr="placeholder" placeholder="type something">
         </div>
-        <button type="button" class="submit-btn" onclick="return false" data-i18n="contact.submit">send -></button>
+        <button type="button" class="submit-btn" onclick="return false"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg> <span data-i18n="contact.submit">send -></span></button>
       </div>
     </section>
 
@@ -162,6 +169,38 @@ body { text-transform: lowercase; }</div>
 &nbsp;&nbsp;from { opacity: 0; transform: translateY(10px); }<br>
 &nbsp;&nbsp;to &nbsp;&nbsp;{ opacity: 1; transform: translateY(0); }<br>
 }</div>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="styleguide.iconsHeading">08 / icons</span></h2>
+      <p class="muted" style="max-width:60ch" data-i18n="styleguide.iconsDesc" data-i18n-html>
+        lucide icons inlined as raw svg — no icon font, no extra network request. sized via the <code>.icon</code> class and colored with <code>currentColor</code>, so they always match the surrounding text.
+      </p>
+      <div class="component-demo">
+        <div class="demo-caption" data-i18n="styleguide.iconsCaption">hover to see .hover-lift and .hover-scale in action</div>
+        <div style="display:flex;gap:28px;align-items:center;color:var(--text-primary)">
+          <span class="hover-lift" style="display:inline-flex"><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></span>
+          <span class="hover-scale" style="display:inline-flex"><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+          <span class="hover-lift" style="display:inline-flex"><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span class="hover-scale" style="display:inline-flex"><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M3 15v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4"/><path d="m7 10 5 5 5-5"/></svg></span>
+        </div>
+      </div>
+    </section>
+
+    <section data-animate>
+      <h2><span class="idx" data-i18n="styleguide.variantsHeading">09 / reveal variants</span></h2>
+      <p class="muted" style="max-width:60ch" data-i18n="styleguide.variantsDesc">
+        scroll to trigger each data-animate variant below. a data-animate-group parent staggers its children automatically — no manual delay classes needed.
+      </p>
+      <div class="component-demo">
+        <div class="swatch-grid" data-animate-group>
+          <div class="swatch" data-animate="fade-up" style="padding:18px;text-align:center;font-family:var(--font-mono);font-size:0.78rem;color:var(--text-muted)">fade-up</div>
+          <div class="swatch" data-animate="fade-in" style="padding:18px;text-align:center;font-family:var(--font-mono);font-size:0.78rem;color:var(--text-muted)">fade-in</div>
+          <div class="swatch" data-animate="scale" style="padding:18px;text-align:center;font-family:var(--font-mono);font-size:0.78rem;color:var(--text-muted)">scale</div>
+          <div class="swatch" data-animate="slide-left" style="padding:18px;text-align:center;font-family:var(--font-mono);font-size:0.78rem;color:var(--text-muted)">slide-left</div>
+          <div class="swatch" data-animate="slide-right" style="padding:18px;text-align:center;font-family:var(--font-mono);font-size:0.78rem;color:var(--text-muted)">slide-right</div>
+        </div>
+      </div>
     </section>
   </main>
 

@@ -38,7 +38,7 @@ const translations = {
     "projects.desc5": "automated news scraper that uses sentiment analysis to evaluate positive or negative impacts on target companies.",
 
     "resume.heading": "01 / resume",
-    "resume.download": "&#8681; download resume.pdf",
+    "resume.download": "download resume.pdf",
     "resume.expHeading": "02 / experience[1]",
     "resume.job1Title": "it intern (data & development)",
     "resume.job1Date": "aug 2025 — abr 2026",
@@ -101,8 +101,13 @@ const translations = {
     "styleguide.fieldLabel": "sample field",
     "styleguide.fieldPlaceholder": "type something",
     "styleguide.motionHeading": "07 / motion",
-    "styleguide.motionDesc": "page entrances use fade + a slight vertical shift (0.5s). sections below the fold reveal as they enter the viewport via intersectionobserver. everything respects <code>prefers-reduced-motion</code>.",
-    "styleguide.codeMotionComment": "/* entrance animation */"
+    "styleguide.motionDesc": "page entrances use fade + a slight vertical shift (0.5s). sections below the fold reveal as they enter the viewport via intersectionobserver, with variants (fade-in, scale, slide-left, slide-right) and automatic stagger via <code>data-animate-group</code>. everything respects <code>prefers-reduced-motion</code>.",
+    "styleguide.codeMotionComment": "/* entrance animation */",
+    "styleguide.iconsHeading": "08 / icons",
+    "styleguide.iconsDesc": "lucide icons inlined as raw svg — no icon font, no extra network request. sized via the <code>.icon</code> class and colored with <code>currentColor</code>, so they always match the surrounding text.",
+    "styleguide.iconsCaption": "hover to see .hover-lift and .hover-scale in action",
+    "styleguide.variantsHeading": "09 / reveal variants",
+    "styleguide.variantsDesc": "scroll to trigger each data-animate variant below. a data-animate-group parent staggers its children automatically — no manual delay classes needed."
   },
 
   pt: {
@@ -142,7 +147,7 @@ const translations = {
     "projects.desc5": "scraper de notícias com análise de sentimento (nlp) para avaliar os impactos mercadológicos positivos ou negativos em empresas.",
 
     "resume.heading": "01 / curriculo",
-    "resume.download": "&#8681; baixar curriculo.pdf",
+    "resume.download": "baixar curriculo.pdf",
     "resume.expHeading": "02 / experiencia[1]",
     "resume.job1Title": "estagiário de desenvolvimento e analise de dados",
     "resume.job1Date": "ago 2025 — apr 2026",
@@ -205,8 +210,13 @@ const translations = {
     "styleguide.fieldLabel": "campo de exemplo",
     "styleguide.fieldPlaceholder": "digite algo",
     "styleguide.motionHeading": "07 / movimento",
-    "styleguide.motionDesc": "entradas de página usam fade + leve deslocamento vertical (0.5s). seções abaixo da dobra revelam ao entrar na tela via intersectionobserver. tudo respeita <code>prefers-reduced-motion</code>.",
-    "styleguide.codeMotionComment": "/* animação de entrada */"
+    "styleguide.motionDesc": "entradas de página usam fade + leve deslocamento vertical (0.5s). seções abaixo da dobra revelam ao entrar na tela via intersectionobserver, com variantes (fade-in, scale, slide-left, slide-right) e escalonamento automático via <code>data-animate-group</code>. tudo respeita <code>prefers-reduced-motion</code>.",
+    "styleguide.codeMotionComment": "/* animação de entrada */",
+    "styleguide.iconsHeading": "08 / ícones",
+    "styleguide.iconsDesc": "ícones lucide inline em svg puro — sem icon font, sem requisição extra. dimensionados pela classe <code>.icon</code> e coloridos via <code>currentColor</code>, sempre acompanhando o texto ao redor.",
+    "styleguide.iconsCaption": "passe o mouse para ver .hover-lift e .hover-scale em ação",
+    "styleguide.variantsHeading": "09 / variantes de revelação",
+    "styleguide.variantsDesc": "role a página para disparar cada variante de data-animate abaixo. um pai com data-animate-group escalona os filhos automaticamente — sem precisar de classes de delay manuais."
   }
 };
 
@@ -258,6 +268,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // reveal ao rolar
   const targets = document.querySelectorAll("[data-animate]");
+
+  // stagger automático: qualquer container com data-animate-group aplica
+  // um atraso crescente aos filhos diretos que tenham data-animate,
+  // sem precisar numerar manualmente (substitui o antigo enter-1..5 fixo)
+  document.querySelectorAll("[data-animate-group]").forEach((group) => {
+    let i = 0;
+    Array.from(group.children).forEach((child) => {
+      if (child.hasAttribute("data-animate")) {
+        child.style.setProperty("--stagger-index", i);
+        i++;
+      }
+    });
+  });
+
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (reduceMotion || !("IntersectionObserver" in window)) {
