@@ -29,13 +29,15 @@ const translations = {
     "home.linkContact": "get in touch ->",
     "home.stackHeading": "02 / stack",
 
-    "projects.heading": "-/ projects[4]",
+    "projects.heading": "-/ projects[5]",
     "projects.intro": "click any item in the list to open the repository on github.",
     "projects.desc1": "hybrid regex + LLM scraping pipeline for hardware listings, with a live Streamlit dashboard for price monitoring and resale opportunities.",
     "projects.desc2": "flutter mobile app for fast, offline-first lookup of antibiotic protocols, built with clean architecture and a clinical-grade UI.",
     "projects.desc3": "real estate scraping pipeline with playwright, postgresql storage and streamlit dashboards to track and predict fair market prices.",
     "projects.desc4": "poker equity engine with a monte carlo simulator served over a fastapi backend to a react frontend, including a GTO training mode.",
     "projects.desc5": "automated news pipeline that scrapes, deduplicates and runs sentiment analysis to gauge market impact on target companies.",
+    "projects.desc6": "Chronoanalysis timer for task tracking by teams and managers, with data visualization on dashboards.",
+    
 
     "resume.heading": "01 / resume",
     "resume.download": "download resume.pdf",
@@ -142,13 +144,14 @@ const translations = {
     "home.linkContact": "falar comigo ->",
     "home.stackHeading": "02 / stack",
 
-    "projects.heading": "01 / projetos[4]",
+    "projects.heading": "01 / projetos[5]",
     "projects.intro": "clique em qualquer item da lista para abrir o repositório no github.",
     "projects.desc1": "pipeline de scraping híbrido (regex + LLM) para anúncios de hardware, com dashboard streamlit ao vivo para monitorar preços e oportunidades de revenda.",
     "projects.desc2": "app mobile em flutter para consulta rápida e offline de protocolos de antibióticos, com clean architecture e interface de padrão clínico.",
     "projects.desc3": "pipeline de raspagem de imóveis com playwright, armazenamento em postgresql e dashboards em streamlit para acompanhar e prever preços de mercado.",
     "projects.desc4": "motor de equidade de poker com simulador monte carlo servido via fastapi para um frontend em react, incluindo modo de treino GTO.",
     "projects.desc5": "pipeline automatizado de notícias que raspa, deduplica e roda análise de sentimento para medir o impacto no mercado de empresas-alvo.",
+    "projects.desc6": "Cronômetro de cronoanálise para acompanhamento de tarefas por equipes e gestores, com visualização de dados em dashboards.",
 
     "resume.heading": "01 / curriculo",
     "resume.download": "baixar curriculo.pdf",
